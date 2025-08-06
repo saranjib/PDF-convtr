@@ -8,7 +8,21 @@ $ https://github.com/saranjib/PDF-convtr.git
 ```
 You will need Flask to be installed in you computer to run this app. 
 
-Once you have downloaded  Flask/ Pillow / fpdf all the dependencies, go to the cloned repo directory and run the following command
+Once you have downloaded  Flask/ Pillow / fpdf all the dependencies.
+
+```bash
+$ pip install flask
+```
+
+```bash
+$ pip install Pillow
+```
+
+```bash
+$ pip install fpdf
+```
+
+Once you have done everything then go to the cloned repo directory and run the following command
 
 ```bash
 $ python app.py
