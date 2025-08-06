@@ -21,8 +21,7 @@ $ pip install Pillow
 ```bash
 $ pip install fpdf
 ```
-
-Once you have done everything then go to the cloned repo directory and run the following command
+Go to the cloned repo directory and run the following command
 
 ```bash
 $ python app.py
