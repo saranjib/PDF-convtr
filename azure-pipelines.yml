@@ -18,7 +18,7 @@ variables:
 
   # Agent VM image name
 pool:
- name: 'pdfvm'
+ name: 'vmpdf'
 
 stages:
 - stage: Build
@@ -28,7 +28,7 @@ stages:
     displayName: Build
     steps:
     - task: Docker@2
-      displayName: Build and push an image to container registry
+      displayName: Build 
       inputs:
         containerRegistry: '$(dockerRegistryServiceConnection)'
         repository: '$(imageRepository)'
@@ -43,7 +43,14 @@ stages:
     displayName: Push
     steps:
     - task: Docker@2
-      displayName: Build and push an image to container registry
+      displayName: push an image to container registry
+- task: Docker@2
+  inputs:
+    containerRegistry: '$(dockerRegistryServiceConnection)'
+    repository: '$(imageRepository)'
+    command: 'build'
+    Dockerfile: '**/Dockerfile'
+    tags: '$(tag)'
       inputs:
         containerRegistry: '$(dockerRegistryServiceConnection)'
         repository: '$(imageRepository)'
