@@ -33,7 +33,7 @@ stages:
         containerRegistry: '$(dockerRegistryServiceConnection)'
         repository: '$(imageRepository)'
         command: 'build'
-        Dockerfile: '**/Dockerfile'
+        Dockerfile: './Dockerfile'
         tags: '$(tag)'
 
 - stage: Push
@@ -47,6 +47,5 @@ stages:
       inputs:
         containerRegistry: '$(dockerRegistryServiceConnection)'
         repository: '$(imageRepository)'
-        command: 'build'
-        Dockerfile: '**/Dockerfile'
+        command: 'push'
         tags: '$(tag)'
