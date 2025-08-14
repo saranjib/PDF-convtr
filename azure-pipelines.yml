@@ -43,7 +43,7 @@ stages:
     displayName: Push
     steps:
     - task: Docker@2
-      displayName: Push image to image repository
+      displayName: Push image to Container registries
       inputs:
         containerRegistry: '$(dockerRegistryServiceConnection)'
         repository: '$(imageRepository)'
